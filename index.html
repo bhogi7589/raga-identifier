@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Raga Identifier</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://bhogi7589.github.io/bs4-helper/bs4-helper.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://bhogi7589.github.io/bs4-helper/bs4-helper.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <button type="button" id="theme-switch" class="btn btn-light fixed-top-right"></button>
+        <div class="page-header">
+            <h1 class="heading display-4">Raga Identifier</h1>
+        </div>
+        <div class="container">
+            <div class="mb-3">
+                <label for="r">Select Rishabha:</label>
+                <select id="r" class="custom-select">
+                    <option value="0" selected>None</option>
+                    <option value="1">Shuddha Rishabha</option>
+                    <option value="2">Chatushruti Rishabha</option>
+                    <option value="3">Shatshruti Rishabha</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="g">Select Gandhara:</label>
+                <select id="g" class="custom-select">
+                    <option value="0" selected>None</option>
+                    <option value="1">Shuddha Gandhara</option>
+                    <option value="2">Sadharana Gandhara</option>
+                    <option value="3">Antara Gandhara</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="m">Select Madhyama:</label>
+                <select id="m" class="custom-select">
+                    <option value="0" selected>None</option>
+                    <option value="1">Shuddha Madhyama</option>
+                    <option value="2">Prati Madhyama</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="d">Select Dhaivata:</label>
+                <select id="d" class="custom-select">
+                    <option value="0" selected>None</option>
+                    <option value="1">Shuddha Dhaivata</option>
+                    <option value="2">Chatushruti Dhaivata</option>
+                    <option value="3">Shatshruti Dhaivata</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="n">Select Nishada:</label>
+                <select id="n" class="custom-select">
+                    <option value="0" selected>None</option>
+                    <option value="1">Shuddha Nishada</option>
+                    <option value="2">Kaishiki Nishada</option>
+                    <option value="3">Kakali Nishada</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" type="button" onclick="parse()" data-toggle="modal" data-target="#mela_display">Find Ragas</button>
+        </div>
+        <div class="modal fade" id="mela_display">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Ragas Found</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body" id="ragas"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
